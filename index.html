@@ -11,12 +11,14 @@
 <body>
   <div class="container-jumbotron">
     <center><h1>MOVIES!</h1></center>
-    <center><p>PICK YOUR MOVIE BELOW</p></center>
-  </div>
+    <center><p>PICK YOUR MOVIE BELOW</p>
+  </div>    
+
   <br><br>
   <div class="container">
-    <form id="movieform">
+    <form id="movieForm">
       <label for="age">Please Select Your Age</label>
+      <br>
       <select name="age" id="age">
         <option value="adult">Adult</option>
         <option value="kiddo">Kiddo</option>
@@ -24,6 +26,7 @@
       </select>
       <hr>
       <label for="time">Please select a time:</label>
+      <br>
       <select name="time" id="time">
         <option value="morning">Morning</option>
         <option value="evening">Evening</option>
@@ -31,6 +34,7 @@
       
       <hr>
       <label for="title">Please select a movie:</label>
+      <br>
       <select name="title" id="title">
         <option value="movie1">The Positively True Adventures of the Alleged Texas Cheerleader-Murdering Mom</option>
         <option value="movie2">Stop or My Mom Will Shoot</option>
@@ -38,10 +42,11 @@
       </select>
       <br>
       <br>
-      <center><button type="submit" class="btn btn-danger">Submit</button>
+      <center><button type="submit" class="btn btn-danger">Submit</button></center>
+      
     </form>
-    
-    
+    <div id="result">  
+    </div>
   </div>
 
 </body>

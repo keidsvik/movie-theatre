@@ -1,6 +1,6 @@
 // Back-End Logic ------
-function Tickets(movieTitle, movieTime, movieAge) {
-  this.movieTitle = movieName;
+function Ticket(movieTitle, movieTime, movieAge) {
+  this.movieTitle = movieTitle;
   this.movieTime = movieTime;
   this.movieAge = movieAge;
   this.moviePrice = 0
@@ -8,17 +8,33 @@ function Tickets(movieTitle, movieTime, movieAge) {
 
 Ticket.prototype.ticketPrice = function() {
   if(this.movieAge === 'senior' && this.movieTime === "morning" || this.movieAge === "kiddo" && this.movieTime === "morning") {
-    this.price += 3;
-  }else if(this.movieAge === "senior" && this.movieTime === "night" || this.movieAge === "kiddo" && this.movieTime === "night") {
-    this.price +=4;
+    this.moviePrice += 3;
+  }else if(this.movieAge === "senior" && this.movieTime === "evening" || this.movieAge === "kiddo" && this.movieTime === "evening") {
+    this.moviePrice += 4;
   }else{
-    this.price +=1000
+    this.moviePrice +=1000;
   }
-  return this.price
+  return this.moviePrice
 }
 
 
-
-// adult: $9.99 child/65+: $3
-
 // Front End Logic -------
+
+var ticket = new Ticket();
+
+$(document).ready(function(){
+  $("form#movieForm").submit(function(event){
+    event.preventDefault();
+    var movieAge = $("select#age").val();
+    var movieTime = $("select#time").val();
+    var movieTitle = $("select#title").val();
+    $("select#age").val();
+    $("select#time").val();
+    $("select#title").val();
+    var newTicket = new Ticket(movieAge, movieTime, movieTitle);
+    newTicket.ticketPrice();
+    $("div#result").text("movie:" + this.movieTitle + "price:" + this.moviePrice);
+
+    console.log(newTicket)
+  })
+})
