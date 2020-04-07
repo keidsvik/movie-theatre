@@ -1,0 +1,21 @@
+body {
+  align: center;
+}
+
+.container-jumbotron {
+background-image: url(https://m.media-amazon.com/images/M/MV5BOTY4NzI3Nzc5Nl5BMl5BanBnXkFtZTYwMzc1MzM5._V1_.jpg);
+padding-top: 100px;
+padding-bottom: 100px;
+font-family: impact;
+font-size: larger;
+}
+
+.p {
+  color: rgb(240, 146, 4);
+}
+
+h1 {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 100px;
+
+}
