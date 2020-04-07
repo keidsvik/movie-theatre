@@ -17,7 +17,7 @@ _Users will select the name of a movie, the time of day that they would like to 
 
 ## Known Bugs
 
-_?????._
+_Will return values in console but not on page unless they're being returned as movie:undefined title:undefined_
 
 ## Support and contact details
 
